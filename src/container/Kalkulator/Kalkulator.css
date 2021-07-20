@@ -1,0 +1,29 @@
+.calculator {
+  width: 500px;
+  height: 500px;
+  margin-top: 100px;
+  background: whitesmoke !important;
+  border-radius: 15px;
+  border: 2px solid black;
+  padding: 0;
+}
+.icons button {
+  background: transparent !important;
+  color: #000 !important;
+  border: 1px solid gray !important;
+  outline: none;
+  box-shadow: none;
+  padding: 0px 10px;
+}
+.icons button:hover {
+  background: transparent !important;
+  color: #000 !important;
+}
+.form {
+  background-color: #c5d3e0;
+  padding: 10px 20px;
+  border-radius: 15px 15px 0px 0px;
+}
+.calculator input {
+  font-weight: bold;
+}
