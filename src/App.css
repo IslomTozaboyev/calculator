@@ -1,0 +1,8 @@
+.App .button {
+  display: flex !important;
+  margin: 0 auto !important;
+  margin-top: 300px !important;
+}
+.App .calc {
+  width: 100px;
+}

@@ -98,52 +98,52 @@ export default class Kalkulator extends Component {
     render() {
         return (
             <div>
-                <div className={`container ${this.state.b && "calculator" || "small__calculator "}`}>
-                <div className="form d-flex justify-content-between align-items-center">
+                {this.state.a && <div className={`container ${this.state.b && "calculator" || "small__calculator "}`}>
+                    <div className="form d-flex justify-content-between align-items-center">
                         <Button className={`${this.state.b && "reflesh bg-transparent text-dark" || "small__reflesh"}`} onClick={this.reflesh}>
-                    <FontAwesomeIcon icon={faRedoAlt} />
-                    </Button>
+                            <FontAwesomeIcon icon={faRedoAlt} />
+                        </Button>
                         <h5 className={`${this.state.b && "fw-bold mb-0" || "small__text mb-0"}`}>Form 1</h5>
                         <div className={`${this.state.b && "icons" || "small__icons"}`}>
-                        <Button className="shadow-none me-1"><FontAwesomeIcon icon={faMinus}/></Button>
-                        <Button onClick={this.small} className="shadow-none "><FontAwesomeIcon icon={faWindowRestore}/></Button>
-                        <Button onClick={this.close} className="shadow-none me-1"><FontAwesomeIcon icon={faTimes}/></Button>
+                            <Button className="shadow-none me-1"><FontAwesomeIcon icon={faMinus} /></Button>
+                            <Button onClick={this.small} className="shadow-none "><FontAwesomeIcon icon={faWindowRestore} /></Button>
+                            <Button onClick={this.close} className="shadow-none me-1"><FontAwesomeIcon icon={faTimes} /></Button>
+                        </div>
                     </div>
-                </div>
 
-                {this.state.a && <div className="p-3">
-                    <Box className="my-4">
-                        <h6>First Number</h6>
-                        <Input className="shadow-none" type="text" onChange={this.changed} value={this.state.num1} />
-                    </Box>
-                    <Box className="my-4">
-                        <h6>Second Number</h6>
-                        <Input className="shadow-none" type="text" onChange={this.changed2} value={this.state.num2} />
-                    </Box>
-                    <Box className="my-3">
-                        <h6>Answer</h6>
-                        <Input className="shadow-none" type="text" value={this.state.answer} />
-                    </Box>
+                    <div className="p-3">
+                        <Box className="my-4">
+                            <h6>First Number</h6>
+                            <Input className="shadow-none" type="text" onChange={this.changed} value={this.state.num1} />
+                        </Box>
+                        <Box className="my-4">
+                            <h6>Second Number</h6>
+                            <Input className="shadow-none" type="text" onChange={this.changed2} value={this.state.num2} />
+                        </Box>
+                        <Box className="my-3">
+                            <h6>Answer</h6>
+                            <Input className="shadow-none" type="text" value={this.state.answer} />
+                        </Box>
 
                         <div className={`${this.state.b && "answer text-center" || "small__answer text-center"}`}>
-                        <Box className="d-flex justify-content-between align-items-center my-4">
-                            <Button className="text-dark shadow-none" onClick={this.plus} type="submit" color="secondary">+</Button>
-                            <Button className="text-dark shadow-none" onClick={this.minus} color="secondary">-</Button>
-                            <Button className="text-dark shadow-none" onClick={this.kopaytirish} color="secondary">*</Button>
-                        </Box>
+                            <Box className="d-flex justify-content-between align-items-center my-4">
+                                <Button className="text-dark shadow-none" onClick={this.plus} type="submit" color="secondary">+</Button>
+                                <Button className="text-dark shadow-none" onClick={this.minus} color="secondary">-</Button>
+                                <Button className="text-dark shadow-none" onClick={this.kopaytirish} color="secondary">*</Button>
+                            </Box>
 
-                        <Box className="d-flex justify-content-between align-items-center">
-                            <Button className="text-dark shadow-none" onClick={this.bolish} color="secondary">/</Button>
-                            <Button className="text-dark shadow-none" onClick={this.kvadrat} color="secondary">
-                                <FontAwesomeIcon icon={faDraft2digital} />
-                            </Button>
-                            <Button className="text-dark shadow-none" color="secondary">
-                                <FontAwesomeIcon onClick={this.ildiz} icon={faSquareRootAlt} />
-                            </Button>
-                        </Box>
+                            <Box className="d-flex justify-content-between align-items-center">
+                                <Button className="text-dark shadow-none" onClick={this.bolish} color="secondary">/</Button>
+                                <Button className="text-dark shadow-none" onClick={this.kvadrat} color="secondary">
+                                    <FontAwesomeIcon icon={faDraft2digital} />
+                                </Button>
+                                <Button className="text-dark shadow-none" color="secondary">
+                                    <FontAwesomeIcon onClick={this.ildiz} icon={faSquareRootAlt} />
+                                </Button>
+                            </Box>
+                        </div>
                     </div>
-                </div> || <div className="text-center mt-5 fw-bold text-danger">Close Window !</div>}
-            </div>
+                </div> || ""}
             </div>
         )
     }
