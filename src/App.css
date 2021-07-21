@@ -1,5 +1,7 @@
 .App .button {
   display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
   margin: 0 auto !important;
   margin-top: 300px !important;
 }

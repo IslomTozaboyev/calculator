@@ -7,9 +7,24 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background: url("./img/img3.jfif");
   background-size: cover;
+  overflow: hidden;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+@media screen and (max-width: 501px) {
+  body {
+    min-height: 100vh;
+    background-image: linear-gradient(
+      to right top,
+      #0a414e,
+      #0a5263,
+      #09647a,
+      #097691,
+      #0988a9
+    ) !important;
+  }
 }
